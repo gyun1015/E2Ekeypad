@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles   # ✅ 추가
 
-from backend.api.keypad import router as keypad_router
+from api.keypad import router as keypad_router
 
 app = FastAPI()
 
@@ -16,7 +16,7 @@ app.add_middleware(
 )
 
 # ✅ static 파일 서빙 설정 (중요)
-app.mount("/static", StaticFiles(directory="backend/static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 def health():

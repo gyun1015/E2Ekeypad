@@ -1,9 +1,9 @@
 from fastapi import APIRouter
 import uuid
 
-from backend.models.keypad import KeypadResponse
-from backend.services.keypad_service import generate_keypad
-from backend.store.session_store import save_session
+from models.keypad import KeypadResponse
+from services.keypad_service import generate_keypad
+from store.session_store import save_session
 
 router = APIRouter()
 
